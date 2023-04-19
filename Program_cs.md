@@ -1,7 +1,7 @@
 # Program.cs
 
 ## 의미와 역할
-* 어플리케이션 시작 코드가 써있는 파일
+* 어플리케이션 <b>시작 코드</b>가 써있는 파일
 * C/C++에서의 main 함수 파일 역할을 함
 * 앱에서 요구하는 서비스를 설정함
 * 앱의 요청을 핸들링할 수 있게 미들웨어들을 구성하고 파이프라이닝 함
@@ -10,7 +10,7 @@
 * 프로그램 시작옵션 및 DI 서비스를 지정하는 것을 Startup.cs 파일에서 했으나, 현재는 program.cs 파일로 통합됨
 * main 클래스를 만들어 실행 메소드를 만들어서 실행했지만, [최상위 문(Top-level statements)](https://learn.microsoft.com/ko-kr/dotnet/csharp/fundamentals/program-structure/top-level-statements)으로도 사용할 수 있음. VS 2022 기준으로 프로젝스 생성시 최상위 문 세팅이 디폴트로 설정돼있음 (C# 9 부터)
 
-## 코드 분석
+## 코드 실행 흐름
 기본적인 흐름은 다음과 같음
 1. using namespace
 2. builder의 인스턴스를 만듦 (class WebApplicationBuilder)
@@ -18,7 +18,7 @@
 4. 빌더로 앱의 객체를 만듦 (class WebApplication)
 5. 미들웨어 설정 : 앱에서 사용하고자 하는 것들을 지정함
 6. 앱을 실행함
-
+### program.cs 코드
 ```C#
 // 1. using namespace
 using Microsoft.AspNetCore.Builder;
