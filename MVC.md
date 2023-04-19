@@ -42,11 +42,13 @@
 
 * 생성시 기본 프레임워크를 지원함
 
-&#x20;![MVC\_Create](media/MVC\_create.png)
+&#x20;
+
+<figure><img src="media/MVC_create.png" alt=""><figcaption></figcaption></figure>
 
 * Model, View, Controller 각각 디렉토리가 생성되어 있고 연결되어 있음&#x20;
 
-![MVC\_filetree](media/MVC\_filetree.png)
+<figure><img src="media/MVC_filetree.png" alt=""><figcaption></figcaption></figure>
 
 * 각 영역에서 구성요소로 구현함
 * 이를 연결하기 위해 라우팅(Routing)과 컨트롤러 액션(Controller Action) 메서드를 사용함
