@@ -54,3 +54,6 @@ app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 // 설정이 다 끝났으면 앱을 실행함
 app.Run();
 ```
+
+## 참고 문헌
+* [MS Docs](https://learn.microsoft.com/ko-kr/aspnet/core/fundamentals/?view=aspnetcore-7.0&tabs=windows)
