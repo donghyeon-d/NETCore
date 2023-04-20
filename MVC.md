@@ -55,6 +55,10 @@
 
 > 라우팅(Routing)과 컨트롤러 액션(Controller Action)에 대한 자세한 설명은 해당 페이지 참고
 
+## WebAPI server 와 MVC
+* MVC 방식에서 V만 빠진 방식으로 생각하면 됨. VisualStudio에서 MVC방식으로 프로젝트 생성하고, V 부분만 거둬내고 사용해도 됨
+* V 대신 JSON 방식으로 보내주면 됨
+
 ## 참고문헌
 
 * [MDN Web docs](https://developer.mozilla.org/ko/docs/Glossary/MVC)
