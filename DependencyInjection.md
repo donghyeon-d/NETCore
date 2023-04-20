@@ -7,7 +7,7 @@
 * 인터페이스로 구현되어 있어서 의존성 주입을 쉽게할 수 있음
 * 서비스(`builder.service`)로 의존성 주입을 구현하는데, 인터페이스와 구현체를 매핑하여 필요한 객체가 생성될 때(`bulder.build()`) 이를 생성하여 반환해줌
 * 사용자 또는 프레임 워크가 제공하는 서비스를 추가할 수 있음
-* ASP.NET Core 프레임 워크에서는 `builder.Add{GROUP_NAME}`으로 추가함
+* ASP.NET Core 프레임 워크에 포함된 DI는 `builder.Add{GROUP_NAME}`으로 추가함
 
 ## 서비스 (Service)
 * 애플리케이션의 특정 기능을 제공하기 위해 사용되는 클래스나 컴포넌트를 의미
@@ -22,12 +22,22 @@
 
 ## 사용 방법
 3가지 방법으로 의존성 주입이 가능하고, 주입된 방식에 따라 수명주기가 달라짐. (자세한 설명은 MS Docs 참고)
-1. [AddScoped](https://learn.microsoft.com/ko-kr/dotnet/api/microsoft.extensions.dependencyinjection.servicecollectionserviceextensions.addscoped?view=dotnet-plat-ext-5.0) : 지정된 형식의 범위 서비스 지정
-2. [AddSingleton](https://learn.microsoft.com/ko-kr/dotnet/api/microsoft.extensions.dependencyinjection.servicecollectionserviceextensions.addsingleton?view=dotnet-plat-ext-5.0) : 싱글톤 서비스 지정
-3. [AddTransient](https://learn.microsoft.com/ko-kr/dotnet/api/microsoft.extensions.dependencyinjection.servicecollectionserviceextensions.addtransient?source=recommendations&view=dotnet-plat-ext-7.0) : 임시서비스 지정
+1. [AddScoped](https://learn.microsoft.com/ko-kr/dotnet/api/microsoft.extensions.dependencyinjection.servicecollectionserviceextensions.addscoped?view=dotnet-plat-ext-5.0)
+    * 지정된 형식의 범위 서비스 지정
+    * 한 번의 요청 내에서는 같은 인스턴스를 반환함. 한번의 요청에서 서비스가 여러번 호출되는 경우 동일한 객체 인스턴스가 반환됨
+2. [AddSingleton](https://learn.microsoft.com/ko-kr/dotnet/api/microsoft.extensions.dependencyinjection.servicecollectionserviceextensions.addsingleton?view=dotnet-plat-ext-5.0)
+    * 싱글톤 서비스 지정
+    * 프로그램 전반에 걸쳐 하나의 인스턴스만 반환
+    * 모든 요청들이 하나의 인스턴스를 사용해도 괜찮은 상황에서 사용함
+3. [AddTransient](https://learn.microsoft.com/ko-kr/dotnet/api/microsoft.extensions.dependencyinjection.servicecollectionserviceextensions.addtransient?source=recommendations&view=dotnet-plat-ext-7.0)
+    * 임시서비스 지정
+    * 매 요청, 매 서비스 호출 때마다 하나의 인스턴스가 반환 됨
 4. [확장 메소드 사용](https://learn.microsoft.com/ko-kr/dotnet/api/microsoft.extensions.dependencyinjection.servicecollection?view=dotnet-plat-ext-7.0)
 * Add{GROUP_NAME}을 사용하여 관련 서비스 그룹을 등록할 수 있음.
 * AddControllers 는 MVC 컨트롤러에 필요한 서비스를 등록함
+> 게임 서버는 멀티쓰레드로 돌아가기 때문에, 서비스 인스턴스가 공유영역이 될 수 있음.
+> 공유영역이 되면 race condition, dead lock 등의 이슈 발생 가능.
+> 공유영역을 안 만드는게 가장 좋기 때문에, AddTransient으로 사용하는 경우가 많음
 
 ## 코드 분석
 * MVC 모델의 프로그램을 실행하는 프레임워크 예시
