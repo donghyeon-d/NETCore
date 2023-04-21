@@ -1,4 +1,4 @@
-# DNS (Domain Name system)
+# DNS(Domain Name system)
 
 ## 호스트 네임(hostname)
 
