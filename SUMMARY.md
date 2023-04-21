@@ -10,4 +10,4 @@
 * [Controller](./NETCore/Controller.md)
 * [Configure](./NETCore/Configure.md)
 * [Library](./NETCore/Library.md)
-    *[WebApplicationzBuilder](./NETCore/library/WebApplicationzBuilder.md)
+    * [WebApplicationzBuilder](./NETCore/library/WebApplicationzBuilder.md)
