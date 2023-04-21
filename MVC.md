@@ -36,6 +36,17 @@
 * 로직과 UI를 분리하여 유지보수성, 확장성, 테스트 용이성을 높일 수 있음
 * 여러 개발자가 동시에 개발을 할 때, 모델, 뷰, 컨트롤러를 분리함으로써 개발의 복잡성을 줄이고 각자의 역할에 집중할 수 있음
 
+## 동작 순서
+1. HTTP Request 가 서버에 옴
+2. Routing에 의해 Controller / Action이 정해짐
+3. Model Binding으로 Request에 있는 데이터를 파싱 하고 유효성 검사 (Binding Model로 받아서 처리)
+4. 담당 서비스로 모델을 전달함 (Application Model로 바꿔서 보냄)
+5. 담당 서비스가 결과물을 Action에게 돌려줌
+6. Action에서 View로 전달 (View Model)
+    * WebAPI 서버의 경우, API Model 로 보내줘서 Response로 결과물 전송
+7. View에서 HTML 생성
+8. Response로 HTML 결과물로 전송
+
 ## ASP.NET Core에서의 MVP
 
 ### 생성
