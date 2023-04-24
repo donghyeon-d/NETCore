@@ -1,6 +1,20 @@
-## basic03
+# basic03
 
-> 파일별로 각 코드가 무엇을 구현하고 있는지에 대해 정리하였습니다. 
+## 개관
+> MySQL과 Redis를 사용하여 계정 생성과 로그인 처리를 합니다.  
+> 라이브러리: MySQL(Sqlkata), Redis(CloudStructures)  
+* MySql 스키마
+```sql
+CREATE TABLE IF NOT EXISTS account_db.`account`
+(
+    AccountId BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT '계정번호',
+    Email VARCHAR(50) NOT NULL UNIQUE COMMENT '이메일',
+    SaltValue VARCHAR(100) NOT NULL COMMENT  '암호화 값',
+    HashedPassword VARCHAR(100) NOT NULL COMMENT '해싱된 비밀번호',
+    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '생성 날짜'
+)
+```
+* 
 
 ## Porgram.cs
 1. 빌더 생성
@@ -89,6 +103,7 @@
     var redisId = new RedisString<string>(DBManager.RedisConn, request.Email, idDefaultExpiry);
     await redisId.SetAsync(tokenValue);
     ```
+    * 이후에 클라이언트가 데이터 요청시 이 토큰 정보를 서버에게 보낼 것이며, 서버는 이 토클을 Redis에 있는지 확인하여 사용자 인증 및 권한을 확인 할 수 있음
     
 6. 사용자에게 토큰 보내주기
     
