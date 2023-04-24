@@ -1,6 +1,6 @@
 # Intro
 
-> 컴투스 서버캠퍼스 1기의 첫번째 과제를 수행하면서 만든 문서입니다. 웹서버 방식의 게임서버에 대한 주제로 학습하는 내용을 문서로 작성하였습니다. 이번 챕터는 HTTP에 대한 소개입니다. 이 자료는 이전에 개인적으로 학습했던 자료를 재구성 하였습니다.\
+> 컴투스 서버캠퍼스 1기의 첫번째 과제를 수행하면서 만든 문서입니다. 웹서버 방식의 게임서버에 대한 주제로 학습하는 내용을 문서로 작성하였습니다. 이번 챕터는 HTTP에 대한 소개입니다. 이 자료는 이전에 개인적으로 학습했던 자료를 재구성 하였습니다.
 > WebAPI Server가 무엇인지 알기 위해서는 WEB, HTTP, REST에 대해 이해해야 합니다. 그와 관련된 내용을 먼저 학습하고, WebAPI Server에 대해서 소개하겠습니다.
 
 ## Web
@@ -47,13 +47,4 @@ REST 방식으로 WebAPI를 제공하는 서버
 
 
 ## 안내사항
-
-위에서 설명했듯이 입문자가 작성했기에 잘못된 내용이 있을 수 있습니다. 수정이 필요한 부분이 있으면 `ehdgus6634@naver.com` 으로 메일을 보내주시면 확인하겠습니다.
-
-## 도움을 주신 분들
-
-* [HTTP 완벽가이드](http://www.yes24.com/Product/Goods/15381085)
-* [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
-* [위키피디아](https://ko.wikipedia.org/wiki/HTTP)
-* [gmlwjd9405 블로그](https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html)
-* [waspro blog](https://waspro.tistory.com/331)
+학습하면서 작성한 문서이기에 잘못된 내용이 있을 수 있습니다. 수정이 필요한 부분이 있으면 `ehdgus6634@naver.com` 으로 메일을 보내주시면 확인하겠습니다.
