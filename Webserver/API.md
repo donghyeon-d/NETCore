@@ -7,7 +7,7 @@
 * 두 애플리케이션은 API 라는 규칙으로 서로 요청을 하고 응답을 받음
 
 ## REST API
-* REST방식을 적용한 API [(REST 참고)](./REST.md)
+* REST방식을 적용한 API [(REST에 대한 자세한 내용은 게시글 참고)](./REST.md)
 * WebAPI Server는 이 방식을 주로 사용함
 * WebAPI와 REST API라는 용어는 서로 혼용해서 쓰고 있음
 
