@@ -52,5 +52,8 @@
 ### 기본제공 미들웨어
 [MS Docs 참고](https://learn.microsoft.com/ko-kr/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0#built-in-middleware)
 
+### 사용자 지정 미들웨어 
+[사용자 지정 ASP.NET Core 미들웨어 작성](https://learn.microsoft.com/ko-kr/aspnet/core/fundamentals/middleware/write?view=aspnetcore-7.0)
+
 ## 참고문헌
 - [MS Docs](https://learn.microsoft.com/ko-kr/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0)
