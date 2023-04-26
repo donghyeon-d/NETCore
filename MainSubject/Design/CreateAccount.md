@@ -15,7 +15,8 @@
 5. DB에 계정 추가
     * INSERT INTO AccountDB.Accout(ID, PW)
 6. 기본 게임 데이터 생성 
-    * INSERT INTO AccountDB.Accout(ID, PW)
+    * INSERT INTO GameDB.Character(ID, PW)
+    * INSERT INTO GameDB.Equipment(ID, PW)
 6. 응답 반환
 
 
