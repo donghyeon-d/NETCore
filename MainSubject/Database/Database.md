@@ -118,7 +118,7 @@
     ``` sql
     CREATE TABLE IF NOT EXISTS MasterDataDB.`Character`
     {
-        AccountID INT PRIMARY KEY COMMENT '계정 고유번호',
+        UID INT PRIMARY KEY COMMENT '계정 고유번호',
         Level INT NOT NULL DEFAULT 1 COMMENT '레벨',
         Exp INT NOT NULL DEFALUT 0 COMMENT '누적 경험치',
         Attack INT NOT NULL DEFALUT 10 COMMENT '공격력',
@@ -131,11 +131,11 @@
     ```
 * **Inventory**
     * 케릭터가 갖고 있는 아이템
-    * SELECT * FROM Character WHERE AccountID = '조회하고 싶은 계정명'
+    * SELECT * FROM Character WHERE UID = '조회하고 싶은 계정명'
     ``` sql
     CREATE TABLE IF NOT EXISTS MasterDataDB.`Character`
     {
-        AccountID INT NOT NULL COMMENT '계정 고유번호',
+        UID INT NOT NULL COMMENT '계정 고유번호',
         ItemID INT AUTO_INCREMENT PRIMARY KEY COMMENT '아이템 고유번호',
         ItemCode INT NOT NULL COMMENT '아이템 번호',
         ItemCount INT NOT NULL COMMENT '아이템 개수',
@@ -151,7 +151,7 @@
     ``` sql
     CREATE TABLE IF NOT EXISTS MasterDataDB.`Equipment`
     {
-        AccountID INT PRIMARY KEY COMMENT '계정 고유번호',
+        UID INT PRIMARY KEY COMMENT '계정 고유번호',
         WeaponID INT DEFAULT NULL COMMENT '무기 아이템 번호',
         ShieldID INT DEFAULT NULL COMMENT '방패 아이템 번호',
         HatID INT DEFAULT NULL COMMENT '모자 아이템 번호',
