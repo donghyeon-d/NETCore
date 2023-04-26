@@ -8,10 +8,10 @@
 ## 로직
 1. 클라이언트에게 ID, PW를 입력받음
 2. 앱 버전, 마스터데이터 버전 확인(서버에서 갖고 있는 데이터)
-3. 로그인 데이터 인증 (Redis)
+3. 로그인 데이터 인증 (AccountDB.Account)
     * 유효한 ID
     * PW 해싱해서 DB에 있는 값과 비교
-4. 인증 키 발급 (Redis)
+4. 인증 키 발급 (Redis에 등록 ID:AuthKEY)
 5. 인증키, 기본 게임 데이터(GameDB.Character), 아이템 데이터(GameDB.Equipment) 클라이언트에게 반환
 
 
@@ -28,7 +28,7 @@
 ## API
 * request
     
-    `POST /CreateAccout`
+    `POST /Login`
     ``` JSON
     {
         "ID": "string",
