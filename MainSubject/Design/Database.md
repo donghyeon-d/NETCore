@@ -37,7 +37,7 @@
         Defence BIGINT NOT NULL COMMENT '방어력',
         Magic BIGINT NOT NULL COMMENT '마법력',
         EnhanceMaxCount TINYINT NOT NULL COMMENT '최대 강화 가능 횟수',
-        PossessionCount INT NOT DEFAULT 1 COMMENT '겹침 가능 개수',
+        MaxStack INT NOT DEFAULT 1 COMMENT '겹침 가능 개수',
     ) COMMENT '아이템 정보 테이블';
     ```
 * **ItemAttribute**
@@ -107,7 +107,8 @@
     ``` sql
     CREATE TABLE IF NOT EXISTS MasterDataDB.`Account`
     {
-        ID VARCHAR(50) PRIMARY KEY COMMENT '계정 이름',
+        ID INT AUTO_INCREMENT PRIMARY KEY COMMENT '계정 고유번호',
+        UserID VARCHAR(50) COMMENT '계정 이름',
         PW VARCHAR(100) NOT NULL COMMENT '비밀번호',
     }
     ```
@@ -117,7 +118,7 @@
     ``` sql
     CREATE TABLE IF NOT EXISTS MasterDataDB.`Character`
     {
-        AccountID VARCHAR(50) PRIMARY KEY COMMENT '계정 이름',
+        AccountID INT PRIMARY KEY COMMENT '계정 고유번호',
         Level INT NOT NULL DEFAULT 1 COMMENT '레벨',
         Exp INT NOT NULL DEFALUT 0 COMMENT '누적 경험치',
         Attack INT NOT NULL DEFALUT 10 COMMENT '공격력',
@@ -134,7 +135,7 @@
     ``` sql
     CREATE TABLE IF NOT EXISTS MasterDataDB.`Character`
     {
-        AccountID VARCHAR(50) NOT NULL COMMENT '계정 이름',
+        AccountID INT NOT NULL COMMENT '계정 고유번호',
         ItemID INT AUTO_INCREMENT PRIMARY KEY COMMENT '아이템 고유번호',
         ItemCode INT NOT NULL COMMENT '아이템 번호',
         ItemCount INT NOT NULL COMMENT '아이템 개수',
@@ -150,7 +151,7 @@
     ``` sql
     CREATE TABLE IF NOT EXISTS MasterDataDB.`Equipment`
     {
-        AccountID VARCHAR(50) PRIMARY KEY COMMENT '계정 이름',
+        AccountID INT PRIMARY KEY COMMENT '계정 고유번호',
         WeaponID INT DEFAULT NULL COMMENT '무기 아이템 번호',
         ShieldID INT DEFAULT NULL COMMENT '방패 아이템 번호',
         HatID INT DEFAULT NULL COMMENT '모자 아이템 번호',
