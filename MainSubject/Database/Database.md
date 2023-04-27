@@ -37,7 +37,7 @@
         Defence BIGINT NOT NULL COMMENT '방어력',
         Magic BIGINT NOT NULL COMMENT '마법력',
         EnhanceMaxCount TINYINT NOT NULL COMMENT '최대 강화 가능 횟수',
-        MaxStack INT NOT DEFAULT 1 COMMENT '겹침 가능 개수',
+        MaxStack INT NOT NULL DEFAULT 1 COMMENT '겹침 가능 개수'
     ) COMMENT '아이템 정보 테이블';
     ```
 * **ItemAttribute**
@@ -48,7 +48,7 @@
     CREATE TABLE IF NOT EXISTS MasterDataDB.`ItemAttribute`
     (
         Name VARCHAR(50) NOT NULL UNIQUE COMMENT '특성 이름',
-        Code INT AUTO_INCREMENT PRIMARY KEY COMMENT '아이템 번호',
+        Code INT AUTO_INCREMENT PRIMARY KEY COMMENT '아이템 번호'
     ) COMMENT '아이템 속성 정보 테이블';
     ```
 * **AttendanceReward**
@@ -60,7 +60,7 @@
     (
         Code INT AUTO_INCREMENT PRIMARY KEY COMMENT '보상 번호',
         ItemCode INT NOT NULL COMMENT '아이템 번호',
-        Count INT NOT NULL COMMENT '아이템 개수',
+        Count INT NOT NULL COMMENT '아이템 개수'
     ) COMMENT '출석부 보상 정보 테이블';
     ```
 * **InAppProduct**
@@ -73,7 +73,7 @@
         Code INT NOT NULL COMMENT '상품 번호',
         ItemCode INT NOT NULL COMMENT '아이템 번호',
         ItemName VARCHAR(50) NOT NULL COMMENT '아이템 이름',
-        ItemCount INT NOT NULL COMMENT '아이템 개수',
+        ItemCount INT NOT NULL COMMENT '아이템 개수'
     ) COMMENT '인생 삼풍 정보 테이블 묶음상품';
     ```
 * **StageItem**
@@ -109,7 +109,7 @@
     {
         ID INT AUTO_INCREMENT PRIMARY KEY COMMENT '계정 고유번호',
         UserID VARCHAR(50) COMMENT '계정 이름',
-        PW VARCHAR(100) NOT NULL COMMENT '비밀번호',
+        PW VARCHAR(100) NOT NULL COMMENT '비밀번호'
     }
     ```
 
