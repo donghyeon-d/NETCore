@@ -1,5 +1,3 @@
-# Database
-
 # Redis
 
 ## 플레이어 관련
