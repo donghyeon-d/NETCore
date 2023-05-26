@@ -1,47 +1,39 @@
 # 계정 생성
 
 ## 기능
-* 아이디, 패스워드 저장
 * 아이디 중복체크
 * 패스워드 보안
-* 캐릭터 생성 기능은 없음
+* 아이디, 패스워드 저장
 * 기본데이터 생성 (기본 게임 데이터, 기본 아이템 데이터)
 
 ## 로직
 1. 클라이언트에게 ID, PW를 입력받음
 2. ID 중복 체크 (AccountDB.Accout)
-3. 패스워드 보안 정책 확인 (대문자, 소문자, 숫자 포함, 10자 이상, ID 겹칩 3자 이하)
-4. 패스워드 해시
-5. DB에 계정 추가
-    * INSERT INTO AccountDB.Accout(ID, PW)
-6. 기본 게임 데이터 생성 
-    * INSERT INTO GameDB.Character(ID, PW)
-    * INSERT INTO GameDB.Equipment(ID, PW)
+3. 패스워드 해시
+4. DB에 계정 추가
+5. 기본 게임 데이터 생성 (계정 정보, player기본데이터, 출석부, 던전 생성)
 6. 응답 반환
 
-
-## 로그
-1. 요청에 대해
-2. 응답에 대해(응답 종류에 따라)
-
 ## 사용 DB
+### mysql
 * AccountDB.Account (계정 생성)
-* GameDB.Character (케릭터 생성)
-* GameDB.Equipment (디폴트 튜플 생성. 계정 이름만)
+* GameDB.Player (케릭터 생성)
+* GameDB.Item (케릭터 생성)
+* GameDB.AttendanceBook (출석부 생성)
+* GameDB.CompletedDungeon (완료 던전 정보 생성)
 
 ## API
+>  POST /CreateAccout
 * request
-    
-    `POST /CreateAccout`
     ``` JSON
     {
-        "ID": "string",
-        "PW": "string"
+        "Email": "string",
+        "Password": "string"
     }
     ```
 * response
-
-    `201 Created`
     ``` JSON
-    {}
+    {
+        "Result": "ErrorCode"
+    }
     ```
