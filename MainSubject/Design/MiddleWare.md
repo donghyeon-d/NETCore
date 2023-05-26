@@ -1,9 +1,5 @@
 # 미들웨어
 
-2. Redis에서 player 정보 불러오기
-3. 로그인 데이터 인증 : login할 때 redis에 저장했던 PlayerId, AuthToken과 비교
-
-
 ## 기능
 * 클라이언트는 로그인 이후부터 매 요청때마다 앱버전, 마스터데이터 버전, Player id, AuthToken 을 보냄
 * 컨트롤러의 동작 전에 미들웨어에서 이에 대한 유효성 검사를 함
