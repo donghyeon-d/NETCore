@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Intro](README.md)
-* [과제 분석](./TaskAnalysis.md)
+* [과제 개요](./TaskSummary.md)
 * [추가 학습](./MoreLearn.md)
     * [샤딩 Sharding](./Sharding.md)
     * [Scale out / Scale up](./Scale.md)
