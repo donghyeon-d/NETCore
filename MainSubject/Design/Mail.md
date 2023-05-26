@@ -26,21 +26,23 @@
 ```
 * response
 ``` JSON
-"Result" : "ErrorCode",
-"Mails" : [
-    {
-        "MailId" : "Int32",
-        "Title" : "String",
-        "PostDate" : "DateTime",
-        "ExpiredDate" : "DateTime",
-        "IsOpened" : "Boolean",
-        "IsReceivedItem" : "Boolean",
-        "CanDelete" : "Boolean",
-        "Sender" : "String",
-        "ItemCode" : "Int32",
-        "ItemCount" : "Int32"
-    }
-]
+{
+    "Result" : "ErrorCode",
+    "Mails" : [
+        {
+            "MailId" : "Int32",
+            "Title" : "String",
+            "PostDate" : "DateTime",
+            "ExpiredDate" : "DateTime",
+            "IsOpened" : "Boolean",
+            "IsReceivedItem" : "Boolean",
+            "CanDelete" : "Boolean",
+            "Sender" : "String",
+            "ItemCode" : "Int32",
+            "ItemCount" : "Int32"
+        }
+    ]
+}
 ```
 
 # 특정 메일 내용 보기
