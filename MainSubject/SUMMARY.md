@@ -32,3 +32,11 @@
     * [MySQL](./Database/Database.md)
     * [Redis](./Database/Redis.md)
 * [Coding Conventions](./CodingConvention.md)
+* [회고]
+    * [지원 동기, 기대, 다짐](./Thinking/before.md)
+    * [1주차]
+    * [2주차]
+    * [3주차]
+    * [4주차]
+    * [5주차]
+    * [마치며]
