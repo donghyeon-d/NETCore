@@ -1,3 +1,5 @@
+# 코딩컨벤션
+> 과제를 진행하기에 앞서 제공 받은 코딩 컨벤션(예시)입니다. 최대한 적용해봤는데, 적용되지 않은 부분이 있을 수 있습니다.
 - [dotnet/runtime 코딩 스타일](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md)을 따라간다
 - 클래스와 구조체의 이름은 파스칼식 대/소문자를 사용한다.
 - 함수
