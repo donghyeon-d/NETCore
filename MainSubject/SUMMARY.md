@@ -33,10 +33,10 @@
     * [Redis](./Database/Redis.md)
 * [Coding Conventions](./CodingConvention.md)
 * [회고]
-    * [지원 동기, 기대, 다짐](./Thinking/before.md)
-    * [1주차]
-    * [2주차]
-    * [3주차]
-    * [4주차]
+    * [마음가짐](./Thinking/before.md)
+    * [1주차](./Thinking/1st.md)
+    * [2주차](./Thinking/2nd.md)
+    * [3주차](./Thinking/3rd.md)
+    * [4주차](./Thinking/4th.md)
     * [5주차]
-    * [마치며]
+    * [마치며](./Thinking/last.md)
